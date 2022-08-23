@@ -1,0 +1,21 @@
+<h1>LISTA DE SUPER HEROES</h1>
+
+<li *ngFor="let heroe of heroes">{{heroe}}</li>
+<button (click)="borrar()"> Borrar elemento</button>
+
+<div *ngIf="borrado.length!==0; else noborrar">
+    <h1>HEROE BORRADO:<small>{{borrado}}</small></h1>
+</div>
+
+<ng-template #noborrar><!--#noborrar es una referencia local, no existe en el componete de TS, sino en el template-->
+    <h1>NO A BORRADO NADA</h1>
+</ng-template>
+
+
+
+
+
+
+
+
+
